@@ -1,0 +1,122 @@
+.menu-button {
+  display: flex;
+  padding: 0;
+  border: none;
+  margin-left: auto;
+  /*color: $secondary-text-color;*/
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 21px;
+  padding-bottom: 48px;
+  background-color: var(--primari-white-color);
+  z-index: 100;
+
+  transform: translateY(-100%);
+  transition: transform 250ms ease-in-out;
+
+  &.is-open {
+    transform: translateY(0);
+  }
+}
+
+.mobile-container {
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and(min-width:480px) {
+    width: 480px;
+  }
+}
+.menu-container .mobile-container {
+  flex-direction: column;
+  height: 100%;
+
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.mobile-nav-item {
+  font-size: 40px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-align: left;
+  & + .mobile-nav-item {
+    margin-top: 32px;
+  }
+}
+.mobile-nav-link {
+  color: var(--title-text-color);
+  &--current {
+    color: var(--accent-color);
+  }
+}
+
+.mobile-contact {
+  margin-bottom: 64px;
+}
+
+.mobile-contact-item {
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+
+  & .mail {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+  & + .mobile-contact-item {
+    margin-top: 32px;
+  }
+  & .tel {
+    color: var(--accent-color);
+  }
+}
+
+.mobile-contact-link {
+  color: inherit;
+}
+
+.mobile-social-link {
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  padding-right: 10px;
+  color: #2196f3;
+}
+.mobile-social {
+  display: flex;
+
+  @media screen and(max-width:390px) {
+    display: block;
+  }
+}
+
+.mobile-social-item:not(:last-child) {
+  @media screen and(min-width:390px) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    margin-right: 10px;
+  }
+  @media screen and(max-width:389.9px) {
+    margin-bottom: 10px;
+  }
+}
