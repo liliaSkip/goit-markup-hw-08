@@ -42,10 +42,11 @@
   }
 }
 .project__link {
-  display: block;
+  display: flex;
   box-shadow: none;
   transition: box-shadow 250ms var(--timing-function);
-
+  flex-direction: column;
+  height: 100%;
   &:hover,
   &:focus {
     box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
@@ -119,10 +120,11 @@
   border-right: 1px solid var(--br-project__box);
   border-bottom: 1px solid var(--br-project__box);
   border-left: 1px solid var(--br-project__box);
+  flex-grow: 1;
 }
 .project__box--height {
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    padding-bottom: 56px;
+    
   }
 }
 .project__name {
